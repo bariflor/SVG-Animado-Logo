@@ -1,0 +1,30 @@
+body{
+	background-color: #D3972F; 
+	padding-top: 60px; 
+}
+@keyframes offset{
+	100%{
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes fill-it{
+	100%{
+		fill: yellow;
+	}
+}
+svg{
+	margin: 2em auto 0;
+	display: block;
+	width: 40%;
+}
+.mano{
+	animation: pulse .5s 1.5s;
+    transform-origin: 50% 50%; /*obligatorio ponerlo para que se centre*/
+	stroke: white;
+	stroke-width: 4;
+	stroke-dasharray: 1350; /*se puede obtener el valor con JS*/
+	stroke-dashoffset: 1350;
+	animation: offset 5s linear forwards, fill-it .8s 2s forwards;
+	transition: transform .3s ease-out;
+	
+}
